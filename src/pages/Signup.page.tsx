@@ -25,9 +25,9 @@ const Signup: FC<Props> = (props) => {
       email: yup.string().email().required("Email is required field"),
     }),
     onSubmit: (data) => {
-      // setTimeout(() => {
-      //   History.push("/dashboard");
-      // }, 3000);
+      setTimeout(() => {
+        History.push("/dashboard");
+      }, 3000);
     },
   });
   return (
