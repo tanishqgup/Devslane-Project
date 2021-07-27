@@ -3,10 +3,10 @@ import { FC, memo } from "react"
 interface Props {}
 
 const AuthHero: FC<Props> = (props) => {
-    console.log("auth hero rendering");
     return (
-        <div className="bg-black w-1/2 h-screen flex items-center justify-center">
-            <h1 className="text-9xl text-red-600">Hero Section</h1>
+        <div className="w-1/2 bg-black h-screen hidden lg:flex items-center justify-center">
+            <div className="w-4/5 h-4/5 bg-authHeroImage bg-no-repeat bg-center bg-contain">
+            </div>
         </div>
     );
 };

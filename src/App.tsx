@@ -2,9 +2,7 @@ import React from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import AuthPage from "./pages/Auth.page";
 import DashboardPage from "./pages/Dashboard.page";
-import LoginPage from "./pages/Login.page";
 import RecordingsPage from "./pages/Recordings.page";
-import SignupPage from "./pages/Signup.page";
 
 function App() {
   return (
