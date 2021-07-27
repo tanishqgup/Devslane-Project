@@ -105,16 +105,36 @@ const Login: FC<Props> = (props) => {
             >
               Password
             </MyInput>
-            <div>
-              <div></div>
+            <div className="flex justify-between items-center">
               <div>
-                <Button theme="primary" fill="outline">Log In</Button>
+                <p className="text-sm font-semibold">Show Password</p>
+              </div>
+              <div>
+                <Button theme="primary" fill="solid">
+                  Log In
+                </Button>
               </div>
             </div>
             {FormHandler.isSubmitting && (
               <FaSpinner className="animate-spin"></FaSpinner>
             )}
+            <div className="w-full flex justify-center mb-2 mt-16">
+              <p className="text-sm font-thin text-gray-700">
+                Keep me logged in
+              </p>
+            </div>
+            <div className="w-full flex justify-center mt-4">
+              <Link className="text-base font-bold text-primary" to="#">
+                Forgot Password?
+              </Link>
+            </div>
           </form>
+          <div className="mt-24">
+            <p className="text-sm font-semibold">
+              © 2020 All Rights Reserved. CORK is a product of Designreset.
+              Cookie Preferences, Privacy, and Terms.
+            </p>
+          </div>
         </div>
       </div>
     </div>

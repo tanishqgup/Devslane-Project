@@ -24,16 +24,16 @@ const Button: FC<Props> = ({ children, theme, fill }) => {
       color: "primary",
     },
     Info: {
-      color: "bg-blue-500",
+      color: "blue-500",
     },
     Success: {
-      color: "bg-green-500",
+      color: "green-500",
     },
     Warning: {
-      color: "bg-yellow-500",
+      color: "yellow-500",
     },
     Danger: {
-      color: "bg-red-500",
+      color: "red-500",
     },
   };
   const apply = generateClasses(themeClasses[theme].color, fill);
