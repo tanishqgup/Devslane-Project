@@ -7,6 +7,7 @@ import * as yup from "yup";
 import MyInput from "../components/MyInput";
 import { setTimeout } from "timers";
 import Button from "../components/Button";
+import ToggleButton from "../components/ToggleButton";
 
 interface Props {}
 
@@ -24,13 +25,13 @@ const Login: FC<Props> = (props) => {
     onSubmit: (data) => {
       setTimeout(() => {
         History.push("/dashboard");
-      }, 2000);
+      }, 3000);
     },
   });
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="flex justify-center w-full lg:w-1/2 font-primary">
+    <div className="flex justify-center w-full lg:w-1/2">
       <div className="w-3/4 h-screen px-11 flex items-center">
         <div className=" h-3/4 w-full">
           <h1 className="text-4xl font-medium mb-2">
@@ -106,19 +107,24 @@ const Login: FC<Props> = (props) => {
               Password
             </MyInput>
             <div className="flex justify-between items-center">
-              <div>
+              <div className="flex items-center">
                 <p className="text-sm font-semibold">Show Password</p>
+                <ToggleButton
+                  checked={showPassword}
+                  onChange={setShowPassword}
+                />
               </div>
-              <div>
+              <div className="flex items-center">
+                {FormHandler.isSubmitting && (
+                  <FaSpinner className="animate-spin mr-2"></FaSpinner>
+                )}
                 <Button theme="primary" fill="solid">
                   Log In
                 </Button>
               </div>
             </div>
-            {FormHandler.isSubmitting && (
-              <FaSpinner className="animate-spin"></FaSpinner>
-            )}
-            <div className="w-full flex justify-center mb-2 mt-16">
+            <div className="w-full flex justify-center mb-2 mt-16 items-center">
+              <input className="mr-3 h-4 w-4" type="checkbox" />
               <p className="text-sm font-thin text-gray-700">
                 Keep me logged in
               </p>
@@ -130,9 +136,24 @@ const Login: FC<Props> = (props) => {
             </div>
           </form>
           <div className="mt-24">
-            <p className="text-sm font-semibold">
-              © 2020 All Rights Reserved. CORK is a product of Designreset.
-              Cookie Preferences, Privacy, and Terms.
+            <p className="text-sm font-semibold text-center">
+              © 2020 All Rights Reserved.{" "}
+              <Link className="text-primary" to="#">
+                CORK
+              </Link>{" "}
+              is a product of Designreset. 
+              <Link className="text-primary" to="#">
+                Cookie Preferences
+              </Link>
+              ,{" "}
+              <Link className="text-primary" to="#">
+                Privacy
+              </Link>
+              , and{" "}
+              <Link className="text-primary" to="#">
+                Terms
+              </Link>
+              .
             </p>
           </div>
         </div>
