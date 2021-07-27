@@ -1,9 +1,9 @@
 import { useFormik } from "formik";
 import { FC, memo } from "react";
 import { Link, useHistory } from "react-router-dom";
-import MyInput from "../components/MyInput";
+import MyInput from "../components/MyInput/MyInput";
 import * as yup from "yup";
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 import ToggleButton from "../components/ToggleButton";
 import { useState } from "react";
 import { FaSpinner } from "react-icons/fa";

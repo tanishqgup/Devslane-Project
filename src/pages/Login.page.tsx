@@ -4,9 +4,9 @@ import { Link, useHistory } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa";
 
 import * as yup from "yup";
-import MyInput from "../components/MyInput";
+import MyInput from "../components/MyInput/MyInput";
 import { setTimeout } from "timers";
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 import ToggleButton from "../components/ToggleButton";
 
 interface Props {}
